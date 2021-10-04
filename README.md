@@ -198,6 +198,26 @@ Now, let's try something fancy. Nowadays, many countries are abandoning their lo
 }
 ```
 
+And that query returns:
+
+```
+{
+  "data": {
+    "countries": [
+      ...
+      {
+        "name": "Palau",
+        "currency": "USD",
+        "continent": {
+          "name": "Oceania"
+        }
+      },
+      ...
+    ]
+  }
+}
+```
+
 Looks like I'm taking a trip to Palau!
 
 ![Palau](https://www.geograf.in/images/pic/b3098cea.jpg)

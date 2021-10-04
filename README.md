@@ -23,7 +23,7 @@ By the end of this lesson, you will be able to:
 
 ## What Is Zeb's Purpose?
 
-### To ascertain what I *really* want to do, and help others find those truths, too.
+### To ascertain what I *really* want to do, and help others find that truth, too.
 
 ## What Has Zeb Done?
 

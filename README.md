@@ -238,5 +238,7 @@ Some things Zeb knows something about:
 
 - [GraphQL Official Site](https://graphql.org/)
 - [Advanced React with GraphQL Course](https://www.udemy.com/course/fullstack-react-graphql-y-apollo-de-principiante-a-experto) \*
+- [Apollo Caching](https://www.apollographql.com/docs/react/caching/cache-configuration/)
+- [Apollo Federation](https://www.apollographql.com/docs/federation/)
 
 > **Note:** \* That course is in Spanish, so I recommend at least an Intermediate level of Spanish fluency before starting. There are other options in different languages on Udemy, I just didn't use them personally.

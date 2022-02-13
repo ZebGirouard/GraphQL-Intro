@@ -234,11 +234,13 @@ Only check the **Answer** if you're really stuck.
 
 <details>
   <summary>Hint</summary>
+
   ## Check the DOCS Section
 </details>
 
 <details>
   <summary>Answer</summary>
+
   ## Country, Continent, Language
 </details>
 
@@ -246,11 +248,13 @@ Only check the **Answer** if you're really stuck.
 
 <details>
   <summary>Hint</summary>
+
   ## Check the `continents` query
 </details>
 
 <details>
   <summary>Answer</summary>
+
   ## 7 / Oceania
 </details>
 
@@ -258,11 +262,13 @@ Only check the **Answer** if you're really stuck.
 
 <details>
   <summary>Hint</summary>
+
   ## Look at the documentation for `CountryFilterInput`
 </details>
 
 <details>
   <summary>Answer</summary>
+  
   ## 12 / Brazil, Falkland Islands, Guyana, Suriname
   ```
   {

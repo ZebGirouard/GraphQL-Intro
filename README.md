@@ -7,10 +7,10 @@
 
 By the end of this lesson, you will be able to:
 
-- Name some cool things about Zeb
+- Say you've met a dude named Zeb
 - Define common GraphQL terms
+- Find a romantic getaway for next Valentine's Day
 - Perform a GraphQL query in a GraphQL Playground
-- Perform a GraphQL mutation in a GraphQL Playground
 
 <!-- 0:05 -->
 ## Who Is Zeb?
@@ -21,21 +21,19 @@ By the end of this lesson, you will be able to:
 
 ![Zeb](https://avatars.githubusercontent.com/u/5480464?v=4)
 
-## What Is Zeb's Purpose?
-
-### To ascertain what I *really* want to do, and help others find that truth, too.
-
 ## What Has Zeb Done?
 
-- [Webroot/Carbonite/OpenText](https://www.webroot.com/us/en/home/products/compare) - eCommerce Platform Developer (Denver)
+<!-- 2 main reasons for this list: to remind everyone that a developer can come from anywhere, and to give ideas for Q&A later -->
+
+- [Webroot/Carbonite/OpenText](https://www.webroot.com/us/en/home/products/compare) - eCommerce Platform Developer (Denver-ish)
 - General Assembly - Software Engineering Immersive Instructor (Denver)
 - [Hoops by Holly*](https://doingthings.media/) - Wearer of All Hats from EC2 to UX (Remote)
-- Imprivata - Build Engineer and Scrum Master (Boston)
-- Netbrain - Network Engineer (Boston)
+- Imprivata - Build Engineer and Scrum Master (Boston-ish)
+- Netbrain - Network Engineer (Boston-ish)
 - Hess Education - Kindergarten Teacher (Taipei)
 - Envision Prop - SAT/GRE/PSAT Tutor (Taipei)
 - Carnegie Mellon - Resident Assistant (Pittsburgh)
-- Convenient Mann - Pizza Delivery Boy (MA)
+- Convenient Mann - Pizza Delivery Boy (Boston-ish)
 
 ![Delivery Boy](https://external-preview.redd.it/FpDfEER_FmLrymffrkgWyNyiUja2AeqB8T6ATkAqIW0.png?auto=webp&s=564526b4b1fd34f2fb40c54f51d2fae3f578defe)
 
@@ -224,22 +222,89 @@ Looks like I'm taking a trip to Palau!
 
 <!-- 0:45 -->
 
+## Your Turn
+
+You can answer all the questions below by querying [The Countries GraphQL API](https://countries.trevorblades.com/).
+
+Try to work out the answer for at least a minute without using the **Hint**.
+
+Only check the **Answer** if you're really stuck.
+
+1. We can directly query 3 data types with this API. What are they?
+
+<details>
+  <summary>Hint</summary>
+  ## Check the DOCS Section
+</details>
+
+<details>
+  <summary>Answer</summary>
+  ## Country, Continent, Language
+</details>
+
+2. How many continents does this API have information for? Which one is not really a continent (more of a geographical area)?
+
+<details>
+  <summary>Hint</summary>
+  ## Check the `continents` query
+</details>
+
+<details>
+  <summary>Answer</summary>
+  ## 7 / Oceania
+</details>
+
+3. How many countries in South America have a currency other than the Euro or the US Dollar? Which ones **don't** have Spanish in their `languages` list?\*
+
+<details>
+  <summary>Hint</summary>
+  ## Look at the documentation for `CountryFilterInput`
+</details>
+
+<details>
+  <summary>Answer</summary>
+  ## 12 / Brazil, Falkland Islands, Guyana, Suriname
+  ```
+  {
+    countries(filter: {
+      currency: {
+        nin: ["EUR", "USD"]
+      }
+      continent: {
+        eq: "SA"
+      }
+    }) {
+      name
+      currency
+      continent {
+        code
+        name
+      }
+      languages {
+        name
+      }
+    }
+  }
+  ```
+</details>
+
+> \* **Note:** Unfortunately, we can't filter countries by language with this API. Where do you think we might add this filter? What might it look like?
+
 ## Q & A
 
-Some things Zeb knows something about:
+Some things Zeb can answer questions about:
 
 - GraphQL
-- Traveling
 - Digital Nomad-ing
 - Hackathons
 - Upskilling
 - Foreign Languages / Linguistics
+- Backend vs Frontend
+- Tech Job Hunting
 ## Resources
 
 - [GraphQL Official Site](https://graphql.org/)
-- [Advanced React with GraphQL Course](https://www.udemy.com/course/fullstack-react-graphql-y-apollo-de-principiante-a-experto) \*
+- [Advanced React with GraphQL Course (Spanish)](https://www.udemy.com/course/fullstack-react-graphql-y-apollo-de-principiante-a-experto) \*
 - [Apollo Caching](https://www.apollographql.com/docs/react/caching/cache-configuration/)
 - [Apollo Federation](https://www.apollographql.com/docs/federation/)
 - [Public APIs in GraphQL](https://github.com/APIs-guru/graphql-apis)
-
-> **Note:** \* That course is in Spanish, so I recommend at least an Intermediate level of Spanish fluency before starting. There are other options in different languages on Udemy, I just didn't use them personally.
